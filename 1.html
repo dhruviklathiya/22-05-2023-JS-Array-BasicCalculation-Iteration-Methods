@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic calculation of array</title>
+</head>
+<style>
+    h1{
+        color: coral;
+    }
+    h2{
+        color: cornflowerblue;
+    }
+    p{
+        color: rgb(106, 131, 179);
+    }
+    .p_color{
+        color: green;
+    }
+</style>
+<body>
+    <h1>Basic calculation of array</h1>
+    <h2>Addition all element of array in one:</h2>
+    <p>Array ===> [10,20,30,40,50,60];</p>
+    <p class="p_color" id="ans_1"></p>
+    <h2>Substraction all element of array in one:</h2>
+    <p>Array ===> [10,20,30,40,50,60];</p>
+    <p class="p_color" id="ans_2"></p>
+    <h2>Multiplication all element of array in one:</h2>
+    <p>Array ===> [1,2,3,4,5,6];</p>
+    <p class="p_color" id="ans_3"></p>
+    <h2>Division all element of array in one:</h2>
+    <p>Value : 720000</p>
+    <p>Array ===> [1,2,3,4,5,6];</p>
+    <p class="p_color" id="ans_4"></p>
+    <script type="text/javascript">    
+        addition_in_one(); // Running function without declaration : hoisting 
+        function addition_in_one () {
+            let array_1 = [10,20,30,40,50,60];
+            let ans_1 = 0;
+            for(let i in array_1)
+            {
+                ans_1 += array_1[i];
+            }
+            document.getElementById('ans_1').innerHTML = "=> " + ans_1;
+        }   
+        substraction_in_one();
+        function substraction_in_one () {
+            let array_1 = [10,20,30,40,50,60];
+            let ans_1 = 0;
+            for(let i in array_1)
+            {
+                ans_1 -= array_1[i];
+            }
+            // console.log("🚀 ~ file: 1.html:48 ~ substraction_in_one ~ ans_1:", ans_1) // Answer is -210 cause ans_1 have no initial value
+            document.getElementById('ans_2').innerHTML = "=> " + ans_1;
+        }
+        multiplication_in_one();
+        function multiplication_in_one () {
+            let array_1 = [1,2,3,4,5,6];
+            let ans_1 = 1;
+            for(let i in array_1)
+            {
+                ans_1 *= array_1[i];
+            }
+            document.getElementById('ans_3').innerHTML = "=> " + ans_1;
+        }
+        division_in_one();
+        function division_in_one () {
+            let array_1 = [1,2,3,4,5,6];
+            let ans_1 = 720000; // We must provide ans_1 value for division otherwise taking 0 would cause an error and taking 1 would give answer near equal to zero.
+            for(let i in array_1)
+            {
+                ans_1 /= array_1[i];
+            }
+            document.getElementById('ans_4').innerHTML = "=> " + ans_1;
+        }
+
+    </script>
+</body>
+</html>

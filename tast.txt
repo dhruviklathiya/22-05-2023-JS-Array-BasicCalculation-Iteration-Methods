@@ -1,0 +1,3 @@
+Basic calculations of array
+Using array methods ( min 8 methods use)
+Using array iteration create examples ( min 8 iteration use )

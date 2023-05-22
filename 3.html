@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array iteration</title>
+</head>
+    <style>
+    h1{
+        color: coral;
+    }
+        h2{
+            color: cornflowerblue;
+        }
+        p{
+            color: rgb(106, 131, 179);
+        }
+        .p_color{
+            color: green;
+        }
+        </style>
+<body>
+    <h1>List of array iteration methods :  </h1>
+    <h3>map</h3>
+    <h3>flatMap</h3>
+    <h3>forEach</h3>
+    <h3>filter</h3>
+    <h3>reduce</h3>
+    <h3>reduceRight</h3>
+    <h3>every</h3>
+    <h3>some</h3>
+    <h3>indexOf</h3>
+    <h3>lastIndexOf</h3>
+    <h3>find</h3>
+    <h3>findIndex</h3>
+    <h3>Array.from</h3>
+    <h3>keys</h3>
+    <h3>entries</h3>
+    <h3>includes</h3>
+    <h3>spread(...)</h3>
+
+    <!-- // without using function creation & calling  
+    <h2>Array iteration method : forEach</h2>
+    <p>Array before running forEach</p>
+    <p class="p_color">Here is each member array printed with use of forEach</p>
+    <p class="p_color" id="ans_1"></p>
+
+    <h2>Array iteration method : map</h2>
+    <p>Array before running map</p>
+    <p class="p_color">Here is each member array printed with use of map</p>
+    <p class="p_color" id="ans_2"></p>
+
+    <h2>Array iteration method : flatMap</h2>
+    <p>Array before running flatMap</p>
+    <p class="p_color">Here is each member array printed with use of flatMap</p>
+    <p class="p_color" id="ans_3"></p> -->
+
+    <h2>Array iteration method : map</h2>
+    <p>Array before running map : [10,20,30,40,50,60];</p>
+    <p class="p_color">Here is each value of array printed with use of map</p>
+    <p class="p_color" id="ans_11"></p>
+    <p class="p_color">Here is each index of array printed with use of map</p>
+    <p class="p_color" id="ans_12"></p>
+
+    <h2>Array iteration method : flatMap</h2>
+    <p>Array before running flatMap : [10,20,30,40,50,60];</p>
+    <p class="p_color">Here is each value of array printed with use of flatMap</p>
+    <p class="p_color" id="ans_13"></p>
+    <p class="p_color">Here is each index of array printed with use of flatMap</p>
+    <p class="p_color" id="ans_14"></p>
+
+    <h3>Major difference in map and flatmap is that flatmap is combination of map and flattening operation || flatmap takes one input and can provide multiple output where as map can take one input and can provide only one output</h3>
+    
+    <h2>Array iteration method : forEach</h2>
+    <p>Array before running forEach : [10,20,30,40,50,60];</p>
+    <p class="p_color">Here is each value of array printed with use of forEach</p>
+    <p class="p_color" id="ans_15"></p>
+    <p class="p_color">Here is each index of array printed with use of forEach</p>
+    <p class="p_color" id="ans_16"></p>
+
+    <h3>Major difference in map and forEach is that map returns array whereas forEach does not return array</h3>
+    
+    <h2>Array iteration method : filter</h2>
+    <p>Array before running filter : [10,40,50,20,30,60];</p>
+    <p class="p_color">filtered value above or equal to 30 are:</p>
+    <p class="p_color" id="ans_17"></p>
+    <p class="p_color">Sorting this filtered array:</p>
+    <p class="p_color" id="ans_18"></p>
+    <p class="p_color">Boolean expression of filter method is:</p>
+    <p class="p_color" id="ans_19"></p>
+    
+    <h2>Array iteration method: reduce</h2>
+    <p>reduce method goes from left to right for sum 0+10 then 10+20 then 30+30 and so on</p>
+    <p>Array before running reduce : [10,20,30,40,50,60];</p>
+    <p class="p_color">Array after running reduce method:</p>
+    <p class="p_color" id="ans_20"></p>
+    <p>Array before running reduce : [10,20,30,"String",40,50,60];</p>
+    <p class="p_color">Array after running reduce method:</p>
+    <p class="p_color" id="ans_21"></p>
+    <p>Reduce will work till string</p>
+    
+    <h2>Array iteration method: reduceRight</h2>
+    <p>reduceRight method goes from right to left for sum 0+10 then 10+20 then 30+30 and so on</p>
+    <p>Array before running reduceRight : [10,20,30,40,50,60];</p>
+    <p class="p_color">Array after running reduceRight method:</p>
+    <p class="p_color" id="ans_22"></p>
+    <p>Array before running reduceRight : [10,20,30,"String",40,50,60];</p>
+    <p class="p_color">Array after running reduceRight method:</p>
+    <p class="p_color" id="ans_23"></p>
+    <p>Reduce will work till string</p>
+
+    <h2>Array iteration every method</h2>
+    <p>Checks or runs test on every elementes and if all passes : true ; anyone fails : false ;</p>
+    <p>Array before running every : [10,20,30,40,50,60];</p>
+    <p>Checking if all member of array is above 20?</p>
+    <p class="p_color">Output after running array every method</p>
+    <p class="p_color" id="ans_24"></p>
+
+    <h2>Array iteration some method</h2>
+    <p>Checks or runs test on every elementes and if any passes : true ; if every element fails : false ;</p>
+    <p>Array before running some : [10,20,30,40,50,60];</p>
+    <p>Checking if all member of array is above 20?</p>
+    <p class="p_color">Output after running array some method</p>
+    <p class="p_color" id="ans_25"></p>
+    
+    <h2>Array iteration indexOf</h2>
+    <p>Outputs index of searched value</p>
+    <p>If member is not presented in array it returns Negative else index of that member</p>
+    <p>Array before running indexOf : [10,20,30,40,50,60];</p>
+    <p class="p_color">Checking index for 40</p>
+    <p class="p_color" id="ans_26"></p>
+    <p class="p_color">Checking index for 90</p>
+    <p class="p_color" id="ans_27"></p>
+
+    <h2>Array iteration lastIndexOf</h2>
+    <p>Array before running lastIndexOf : [10,20,40,50,60,50,40,30,40,50,60,50,70,80,20];</p>
+    <p>If member is not presented in array it returns Negative else last index of that member</p>
+    <p class="p_color">Checking last index for 40</p>
+    <p class="p_color" id="ans_28"></p>
+    <p class="p_color">Checking last index for 90</p>
+    <p class="p_color" id="ans_29"></p>
+    <p>We can also use array.lastIndexOf(item, start) Start: Where to start the search</p>
+    
+    <h2>Array iteration find</h2>
+    <p>If member found in array it returns one single member that fits in condition</p>
+    <p>Array before running some : [10,20,30,40,50,60];</p>
+    <p class="p_color">Running  find value > 40</p>
+    <p class="p_color" id="ans_30"></p>
+    <p class="p_color">Running find value < 90</p>
+    <p class="p_color" id="ans_31"></p>
+
+    <h2>Array iteration findIndex</h2>
+    <p>If member found in array it returns one single index of member that fits in condition</p>
+    <p>Array before running some : [10,20,30,40,50,60];</p>
+    <p class="p_color">Running  findIndex for value > 40</p>
+    <p class="p_color" id="ans_32"></p>
+    <p class="p_color">Running findIndex for value < 90</p>
+    <p class="p_color" id="ans_33"></p>
+
+
+    <h2>Array iteration from</h2>
+    <p>Converts string to array by each character</p>
+    <p>String before running from : "Hello world"</p>
+    <p class="p_color">Array after running from method</p>    
+    <p class="p_color" id="ans_34"></p>
+
+    <h2>Aray iteration keys</h2>
+    <p>Provides keys of array means index</p>
+    <p>Array before running some : [10,20,30,40,50,60];</p>
+    <p class="p_color">Array after running keys</p>
+    <p class="p_color" id="ans_35"></p>
+
+    <h2>Array iteration entries</h2>
+    <p>Outputs both key and value pair in array</p>
+    <p>Array before running some : [10,20,30,40,50,60];</p>
+    <p class="p_color" id="ans_36"></p>
+
+    <h2>Array iteration includes</h2>
+    <p>Outputs true or false</p>
+    <p>Array before running some : [10,20,30,40,50,60];</p>
+    <p class="p_color">Checking array for including 50</p>
+    <p class="p_color" id="ans_37"></p>
+    <p class="p_color">Checking array for including 90</p>
+    <p class="p_color" id="ans_38"></p>
+
+    <h2>Array iteration Spread operator (...)</h2>    
+    <p class="p_color" id="array_view1"></p>
+    <p class="p_color" id="array_view2"></p>
+    <p class="p_color" id="array_view3"></p>
+    <p class="p_color">Finaly array after using spread operator</p>
+    <p class="p_color" id="ans_39"></p>
+    
+
+    <script type="text/javascript">
+        let array_1 = [10,20,30,40,50,60];
+        
+        // without using function creation & calling 
+        // array_1.forEach(function array_print(a,b,c){
+        //     document.getElementById('ans_1').innerHTML += a + " ";
+        // });
+        // let aa = array_1.map(function array_print(a,b,c){
+        //     document.getElementById('ans_2').innerHTML += a + " ";
+        //     return a;
+        // });
+        // console.log("🚀 ~ file: 3.html:65 ~ aa ~ aa:", aa)
+        // array_1.flatMap(function square(a){
+        //     document.getElementById('ans_3').innerHTML += a*2 + " ";
+        // });
+
+        function map_array_print ()
+        {
+            let ans_value_array = [];
+            let ans_index_array = [];
+            array_1.map((_value,_index)=>{
+                ans_value_array.push(_value);
+                ans_index_array.push(_index);
+            });
+            document.getElementById('ans_11').innerHTML = "=> " + ans_value_array;
+            document.getElementById('ans_12').innerHTML = "=> " + ans_index_array;
+        }
+        map_array_print();
+        
+        function flatMap_array_print ()
+        {
+            let ans_value_array = [];
+            let ans_index_array = [];
+            array_1.flatMap((_value,_index)=>{
+                ans_value_array.push(_value);
+                ans_index_array.push(_index);
+            });
+            document.getElementById('ans_13').innerHTML = "=> " + ans_value_array;
+            document.getElementById('ans_14').innerHTML = "=> " + ans_index_array;
+        }
+        flatMap_array_print();
+
+        function filter_array_print ()
+        {
+            let unfiltered_array = [10,40,50,20,30,60];
+            let ans_value_array = [];
+            let ans_index_array = [];
+            let filtered_array = unfiltered_array.filter((_value,_index)=>{
+                ans_value_array.push(_value >=30);
+                return _value>=30;
+            });
+            document.getElementById('ans_17').innerHTML = "=> " + filtered_array;
+            document.getElementById('ans_19').innerHTML = "=> " + ans_value_array;
+            filtered_array.sort();
+            document.getElementById('ans_18').innerHTML = "=> " + filtered_array;
+        }
+        filter_array_print();
+
+        function reduce_array_print(){
+            let reduced = array_1.reduce(arr_sum);
+            // here we introduced new parameter before value which is previously returned value like 0+10 so total becomes 10 when next time reduce fucntion is run
+            // without this total parameter we will only get one value which is on index 0 cause we're not adding numbers but we're just repeating same number and not getting any oldd information
+            function arr_sum(total,val){
+                return total+val;
+            }
+            document.getElementById('ans_20').innerHTML = "=> " + reduced;
+        }
+        reduce_array_print();
+
+        function reduce_array_print2(){
+            let array_reduce = [10,20,30,"String",40,50,60];
+            let reduced = array_reduce.reduce(arr_sum);
+            // here we introduced new parameter before value which is previously returned value like 0+10 so total becomes 10 when next time reduce fucntion is run
+            // without this total parameter we will only get one value which is on index 0 cause we're not adding numbers but we're just repeating same number and not getting any oldd information
+            function arr_sum(total,val){
+                
+                return total+val;
+            }
+            document.getElementById('ans_21').innerHTML = "=> " + reduced;
+        }
+        reduce_array_print2();
+
+        function reduceRight_array_print(){
+            let reduced = array_1.reduceRight(arr_sum);
+            function arr_sum(total,val){
+                return total+val;
+            }
+            document.getElementById('ans_22').innerHTML = "=> " + reduced;
+        }
+        reduceRight_array_print();
+
+        function reduceRight_array_print2(){
+            let array_reduce = [10,20,30,"String",40,50,60];
+            let reduced = array_reduce.reduceRight(arr_sum);
+            function arr_sum(total,val){
+                
+                return total+val;
+            }
+            document.getElementById('ans_23').innerHTML = "=> " + reduced;
+        }
+        reduceRight_array_print2();
+
+        function run_every(){
+            let ans = array_1.every(fun_check);
+            function fun_check(value){
+                return value>20;
+            }
+            document.getElementById('ans_24').innerHTML = "=> " + ans;
+        }
+        run_every();
+
+        function run_some(){
+            let ans = array_1.some(fun_check);
+            function fun_check(value){
+                return value>20;
+            }
+            document.getElementById('ans_25').innerHTML = "=> " + ans;
+        }
+        run_some();
+
+        function run_indexOf(){
+            let ans1 = array_1.indexOf(40);
+            let ans2 = array_1.indexOf(90);
+            document.getElementById('ans_26').innerHTML = "=> " + ans1;
+            document.getElementById('ans_27').innerHTML = "=> " + ans2;
+        }
+        run_indexOf();
+
+        function run_lastIndexOf(){
+            let array_temp = [10,20,40,50,60,50,40,30,40,50,60,50,70,80,20];
+            let ans1 = array_temp.lastIndexOf(40);
+            let ans2 = array_temp.lastIndexOf(90);
+            document.getElementById('ans_28').innerHTML = "=> " + ans1;
+            document.getElementById('ans_29').innerHTML = "=> " + ans2;
+        }
+        run_lastIndexOf();
+
+        function run_find(){
+            let ans_1 = array_1.find(find_up_40);
+            let ans_2 = array_1.find(find_down_90);
+            function find_up_40(value){
+                return value>40;
+            }
+            function find_down_90(value){
+                return value<90;
+            }
+            document.getElementById('ans_30').innerHTML = "=> " + ans_1;
+            document.getElementById('ans_31').innerHTML = "=> " + ans_2;
+        }
+        run_find();
+
+        function run_findIndex(){
+            let ans_1 = array_1.findIndex(findIndex_up_40);
+            let ans_2 = array_1.findIndex(findIndex_down_90);
+            function findIndex_up_40(value){
+                return value>40;
+            }
+            function findIndex_down_90(value){
+                return value<90;
+            }
+            document.getElementById('ans_32').innerHTML = "=> " + ans_1;
+            document.getElementById('ans_33').innerHTML = "=> " + ans_2;
+        }
+        run_findIndex();
+
+        function run_from(){
+            let string_1 = "Hello world";
+            let ans_34 = Array.from(string_1);
+            document.getElementById('ans_34').innerHTML = "=> " + ans_34;
+        }
+        run_from();
+
+
+        function run_keys(){
+            let ans_35 = array_1.keys();
+            for(let i of ans_35){
+                document.getElementById('ans_35').innerHTML += "=> " + i + "</br>";
+            }
+        }
+        run_keys();
+
+        function run_entries(){
+            let ans_36 = array_1.entries();;
+            for(let i of ans_36)
+            {
+                document.getElementById('ans_36').innerHTML += "=> " + i + "</br>";
+            }
+        }
+        run_entries();
+
+        function run_included(){
+            let ans_37 = array_1.includes(40);
+            let ans_38 = array_1.includes(90);
+            document.getElementById('ans_37').innerHTML = "=> " + ans_37;
+            document.getElementById('ans_38').innerHTML = "=> " + ans_38;
+        }
+        run_included();
+
+        function run_spread(){
+            let sub_array_1 = [...array_1,34,45,665,3,6,77,6,6,5,435,4,5,45,4,5,4,6,56,57,6,];
+            let sub_array_2 = ["String",23,34,23,34,54,67,987,436,6676,"Adding zero so ocatal number being transfered into decimal in 0217---->143",0217,...array_1];
+            let sub_array_3 = [...array_1,"All octal from 10 to 20",011,012,013,014,015,016,017];
+            let final_array = [...array_1,...sub_array_1,...sub_array_2,...sub_array_3];
+            document.getElementById('array_view1').innerHTML = "Array before merge by spread operator (...) : " + sub_array_1;
+            document.getElementById('array_view2').innerHTML = "Array before merge by spread operator (...) : " + sub_array_2;
+            document.getElementById('array_view3').innerHTML = "Array before merge by spread operator (...) : " + sub_array_3;
+            document.getElementById('ans_39').innerHTML = "=> " + final_array;
+        }
+        run_spread();
+    </script>
+</body>
+</html>

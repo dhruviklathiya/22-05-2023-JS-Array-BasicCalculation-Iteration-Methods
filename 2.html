@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array methods</title>
+</head>
+<style>
+    h1{
+        color: coral;
+    }
+    h2{
+        color: cornflowerblue;
+    }
+    p{
+        color: rgb(106, 131, 179);
+    }
+    .p_color{
+        color: green;
+    }
+</style>
+<body>
+    <h1>List of arraymethods :  </h1>
+    <h3>pop push </h3>
+    <h3>shift unshift </h3>
+    <h3>sort reverse </h3>
+    <h3>slice splice </h3>
+    <h3>join flat concat delete </h3>
+    <h3>toString</h3>
+    <h3>length</h3>
+
+    <h2>Array method pop:</h2>
+    <p>Array before pop method run ===> [10,20,30,40,50,60];</p>
+    <p>Array after pop method run for first time :</p>
+    <p class="p_color" id="ans_1"></p>
+    <p>Array after pop method run for second time :</p>
+    <p class="p_color" id="ans_2"></p>
+    <h2>Array method push:</h2>
+    <p>Array before pop method run ===> [10,20,30,40];</p>
+    <p>Array after push(50) method run for first time :</p>
+    <p class="p_color" id="ans_3"></p>
+    <p>Array after push(60) method run for second time :</p>
+    <p class="p_color" id="ans_4"></p>
+
+    <h2>Array method unshift:</h2>
+    <p>Array before unshift method run ===> [10,20,30,40,50,60];</p>
+    <p>Array after unshift(50) method run for first time :</p>
+    <p class="p_color" id="ans_5"></p>
+    <p>Array after unshift(60) method run for second time :</p>
+    <p class="p_color" id="ans_6"></p>
+
+    <h2>Array method shift:</h2>
+    <p>Array before shift method run ===> [60,50,10,20,30,40,50,60];</p>
+    <p>Array after shift method run for first time :</p>
+    <p class="p_color" id="ans_7"></p>
+    <p>Array after shift method run for second time :</p>
+    <p class="p_color" id="ans_8"></p>
+
+    <h2>Array method sort:</h2>
+    <p>Array before sort method run ===>  [2200,62,43,"200","220","M","L","A","D","D49",'A','E','F','G','H','B','C','D','M','N','O','I','J','K','L','P','Q','W','X','Y','Z','R','S','T','U','V'];</p>
+    <p>Array after sort method run:</p>
+    <p class="p_color" id="ans_9"></p>
+
+    <h2>Array method reverse:</h2>
+    <p>Array before reverse method run ===>  ["200","220",2200,43,62,"A","A","B","C","D","D","D"49,"E","F","G","H","I","J","K","L","L","M","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];</p>
+    <p>Array after reverse method run:</p>
+    <p class="p_color" id="ans_10"></p>
+
+    <h2>Array method slice:</h2>
+    <p>Array before slice method run ===>  [10,20,30,40,50,60];</p>
+    <p>Sliced array after running array slice method [passed parameter: (2,4)]:</p>
+    <p class="p_color" id="ans_11"></p>
+
+    <h2>Array method splice:</h2>
+    <p>Array before splice method run ===>  [10,20,30,40,50,60];</p>
+    <p>Sliced array after running array splice method:</p>
+    <p class="p_color" id="ans_12"></p>
+    <p>Original array after running array splice method:</p>
+    <p class="p_color" id="ans_13"></p>
+
+    <!-- <h2>Adding element to array using splice method:</h2>
+    <p>Array before splice method run ===>  [10,20,30,40,50,60];</p>
+    <p>Sliced array after running array splice method:</p>
+    <p class="p_color" id="ans_14"></p>
+    <p>Original array after running array splice method:</p>
+    <p class="p_color" id="ans_15"></p> -->
+
+    <h2>Array method concat:</h2>
+    <p>First array before concat method run ===>  [10,20,30,40,50,60];</p>
+    <p>Second array before concat method run ===>  [2200,62,43,"200","220","M","L","A","D","D49",'A','E','F','G','H','B','C','D','M','N','O','I','J','K','L','P','Q','W','X','Y','Z','R','S','T','U','V'];</p>
+    <p>Final array after concat method</p>
+    <p class="p_color" id="ans_16"></p>
+
+    <h2>Array method join (ES1 till today)</h2>
+    <p>Array before join method run ===> [10,20,30,40,50,60];</p>
+    <p>Array after join method run ===></p>
+    <p class="p_color" id="ans_17"></p>
+    <p class="p_color" id="ans_18"></p>
+
+    <h2>Array method Delete</h2>
+    <p>Array before delete method run ===> [10,20,30,40,50,60];</p>
+    <p>Array after delete method running:
+        delete array_1[1];
+        delete array_1[4];
+        delete array_1[3];===></p>
+    <p class="p_color" id="ans_19"></p>
+    <p class="p_color">Delete method erases particular index at a time we cannot pass multiple parameter and it does not change global array</p>
+    <p class="p_color">Must use delete operator for deleting index</p>
+
+    <h2>Array method length</h2>
+    <p>Array before length method run ===> [2200,62,43,"200","220","M","L","A","D","D49",'A','E','F','G','H','B','C','D','M','N','O','I','J','K','L','P','Q','W','X','Y','Z','R','S','T','U','V'];</p>
+    <p>Array length ===></p>
+    <p class="p_color" id="ans_20"></p>
+</body>
+    <script type="text/javascript">
+        let array_1 = [10,20,30,40,50,60];
+        let array_2 = [2200,62,43,"200","220","M","L","A","D","D49",'A','E','F','G','H','B','C','D','M','N','O','I','J','K','L','P','Q','W','X','Y','Z','R','S','T','U','V'];
+        function run_pop(){
+            array_1.pop();
+            document.getElementById('ans_1').innerHTML = "=> " + array_1;
+        }
+        function run_pop_2nd(){
+            array_1.pop();
+            document.getElementById('ans_2').innerHTML = "=> " + array_1;
+        }
+        run_pop();
+        run_pop_2nd();
+        function run_push(){
+            array_1.push(50);
+            document.getElementById('ans_3').innerHTML = "=> " + array_1;
+        }
+        function run_push_2nd(){
+            array_1.push(60);
+            document.getElementById('ans_4').innerHTML = "=> " + array_1;
+        }
+        run_push();
+        run_push_2nd();
+        function run_unshift(){
+            array_1.unshift(50);
+            document.getElementById('ans_5').innerHTML = "=> " + array_1;
+        }
+        function run_unshift_2nd(){
+            array_1.unshift(60);
+            document.getElementById('ans_6').innerHTML = "=> " + array_1;
+        }
+        run_unshift();
+        run_unshift_2nd();
+        function run_shift(){
+            array_1.shift();
+            document.getElementById('ans_7').innerHTML = "=> " + array_1;
+        }
+        function run_shift_2nd(){
+            array_1.shift();
+            document.getElementById('ans_8').innerHTML = "=> " + array_1;
+        }
+        run_shift();
+        run_shift_2nd();
+        function run_sort(){
+            array_2.sort();
+            document.getElementById('ans_9').innerHTML = "=> " + array_2;
+        }
+        run_sort();
+        function run_reverse(){
+            array_2.reverse();
+            document.getElementById('ans_10').innerHTML = "=> " + array_2;
+        }
+        run_reverse();
+        function run_slice(){ 
+            let sliced_array = array_1.slice(2,4); // slice takes 2 parameter first index number from where you want to slice the array and another is last index number [last number would not be included in new array]
+            document.getElementById('ans_11').innerHTML = "=> " + sliced_array;
+        }
+        run_slice(); // simply start and end is two parameter from which last won't be included
+        function run_splice(){
+            let spliced_array = array_1.splice(2,3);
+            // splice method not only removes but also adds element in array 
+            // try 
+            // let spliced_array = array_1.splice(2,3,"lemon","apple");
+            // console.log("🚀 ~ file: 2.html:140 ~ run_splice ~ array_1:", array_1)
+            // console.log("🚀 ~ file: 2.html:140 ~ run_splice ~ spliced_array:", spliced_array)
+            document.getElementById('ans_12').innerHTML = "=> " + spliced_array;
+            document.getElementById('ans_13').innerHTML = "=> " + array_1;
+        }
+        run_splice();// simply where and how many?
+        // Splice method removes member from global scope too there for we have to reassign value of array_1
+        // Splice method also runs on const variable try to make array_1 const from let and it will still change value of that constant array [error may occur because we have currently re-assigned value to make this whole page access same value for array_1]
+        array_1 = [10,20,30,40,50,60];  
+        
+        
+        // In progress
+        // function run_splice_add(){
+        //     let spliced_array = array_1.splice(2,1,"lemon","apple");
+        //     console.log("🚀 ~ file: 2.html:160 ~ run_splice_add ~ array_1:", array_1)
+        //     console.log("🚀 ~ file: 2.html:160 ~ run_splice_add ~ spliced_array:", spliced_array)
+            
+        //     document.getElementById('ans_14').innerHTML = "=> " + spliced_array;
+        //     document.getElementById('ans_15').innerHTML = "=> " + array_1;
+        // }
+        // run_splice_add();
+
+        function run_concat(){
+            let array_1 = [10,20,30,40,50,60];
+            let array_2 = [2200,62,43,"200","220","M","L","A","D","D49",'A','E','F','G','H','B','C','D','M','N','O','I','J','K','L','P','Q','W','X','Y','Z','R','S','T','U','V'];
+            let concated_array = array_1.concat(array_2);
+            // console.log(concated_array);
+            document.getElementById('ans_16').innerHTML = "=> " + concated_array;
+        }
+        run_concat();
+        function run_join(){
+            let joined_array = array_1.join("_ ++ _");
+            document.getElementById('ans_17').innerHTML = "=> " + joined_array;
+            document.getElementById('ans_18').innerHTML = "=> Passed parameter in join takes place in array after every single comma";
+        }
+        run_join();
+
+        function run_delete(){
+            delete array_1[1];
+            delete array_1[4];
+            delete array_1[3];
+            document.getElementById('ans_19').innerHTML = "=> " + array_1;
+        }
+        run_delete();
+
+        function run_length(){
+            let array_2_length = array_2.length;
+            document.getElementById('ans_20').innerHTML = "=> " + array_2_length;
+        }
+        run_length();
+        // IN PROGRESS ::: toString
+    </script>
+</html>
